@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>QuickOrder · Grocery Checklist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="app-header" id="appHeader">
+        <div class="header-top">
+            <h1>🛒 QuickOrder</h1>
+            <div class="header-actions">
+                <button id="clearSavedOrderBtn" class="btn btn-ghost" title="Clear saved order from this device">🗑️ Clear Saved</button>
+            </div>
+        </div>
+        <div class="search-section">
+            <div class="search-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="search" id="searchInput" placeholder="Search categories, subcategories, products..." autocomplete="off" aria-label="Search products">
+                <button id="clearSearchBtn" class="search-clear" title="Clear search (Esc)">✕</button>
+            </div>
+        </div>
+        <div class="stats-bar" id="statsBar">
+            <span><strong id="statProducts">0</strong> Products</span>
+            <span><strong id="statSelected">0</strong> Selected</span>
+            <span><strong id="statQuantity">0</strong> Quantity</span>
+            <span><strong id="statCategories">0</strong> Categories</span>
+        </div>
+        <div class="control-bar">
+            <div class="select-buttons">
+                <button id="selectAllVisibleBtn" class="btn btn-outline">Select All</button>
+                <button id="unselectAllVisibleBtn" class="btn btn-outline">Unselect All</button>
+            </div>
+            <div class="sort-options">
+                <label for="sortSelect" class="sort-label">Sort:</label>
+                <select id="sortSelect" class="sort-select">
+                    <option value="default">Default</option>
+                    <option value="az">A–Z</option>
+                    <option value="za">Z–A</option>
+                </select>
+            </div>
+            <div class="import-export">
+                <label for="csvFileInput" class="btn btn-outline btn-file">📥 Import CSV</label>
+                <input type="file" id="csvFileInput" accept=".csv,text/csv" style="display:none">
+                <button id="exportCsvBtn" class="btn btn-outline">📤 Export CSV</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="app-content" id="appContent">
+        <div id="categoryList" class="category-list"></div>
+        <div id="emptyState" class="empty-state hidden">
+            <div class="empty-icon">🔎</div>
+            <p id="emptyStateText">No products found.</p>
+        </div>
+    </main>
+
+    <footer class="order-bar" id="orderBar">
+        <div class="order-summary" id="orderSummary">
+            <div class="summary-header">
+                <span>🧾 Current Order</span>
+                <span id="selectedCounterSmall" class="badge">0 items</span>
+            </div>
+            <div id="orderItemsList" class="order-items"></div>
+            <div class="order-actions">
+                <div class="format-selector">
+                    <label for="copyFormatSelect">📋 Format:</label>
+                    <select id="copyFormatSelect">
+                        <option value="simple">Simple</option>
+                        <option value="numbered">Numbered</option>
+                        <option value="category">With Category</option>
+                    </select>
+                </div>
+                <button id="copyOrderBtn" class="btn btn-primary">📋 Copy Order</button>
+                <button id="clearOrderBtn" class="btn btn-danger">🗑️ Clear Order</button>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
