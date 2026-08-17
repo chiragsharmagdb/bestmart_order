@@ -91,7 +91,7 @@ body {
 
 /* Search Section */
 .search-section {
-    margin-bottom: 3px;
+    margin-bottom: 10px;
 }
 
 .search-wrapper {
@@ -101,7 +101,7 @@ body {
     background: var(--bg-main);
     border: 2px solid var(--border);
     border-radius: var(--radius-full);
-    padding: 4px 8px;
+    padding: 8px 16px;
     transition: border-color var(--transition), box-shadow var(--transition);
 }
 
@@ -111,8 +111,8 @@ body {
 }
 
 .search-icon {
-    margin-right: 2px;
-    font-size: 0.5rem;
+    margin-right: 10px;
+    font-size: 1.1rem;
     color: var(--text-secondary);
 }
 
@@ -123,7 +123,7 @@ body {
     background: transparent;
     font-size: 1rem;
     color: var(--text-primary);
-    padding: 2px 0;
+    padding: 4px 0;
 }
 
 .search-wrapper input::placeholder {
@@ -177,9 +177,9 @@ body {
 .control-bar {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 8px;
     align-items: center;
-    padding: 4px 0 2px;
+    padding: 8px 0 4px;
 }
 
 .select-buttons {
@@ -191,7 +191,7 @@ body {
 .sort-options {
     display: flex;
     align-items: center;
-    gap: 3px;
+    gap: 6px;
     margin-left: auto;
 }
 
@@ -202,7 +202,7 @@ body {
 }
 
 .sort-select {
-    padding: 1px 3px;
+    padding: 6px 10px;
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
     background: var(--bg-white);
@@ -216,6 +216,11 @@ body {
     border-color: var(--primary);
 }
 
+.import-export {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
 
 /* ============================================
    BUTTON STYLES
