@@ -91,7 +91,7 @@ body {
 
 /* Search Section */
 .search-section {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .search-wrapper {
@@ -111,7 +111,7 @@ body {
 }
 
 .search-icon {
-    margin-right: 10px;
+    margin-right: 5px;
     font-size: 1.1rem;
     color: var(--text-secondary);
 }
@@ -177,9 +177,9 @@ body {
 .control-bar {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 4px;
     align-items: center;
-    padding: 8px 0 4px;
+    padding: 4px 0 2px;
 }
 
 .select-buttons {
@@ -202,7 +202,7 @@ body {
 }
 
 .sort-select {
-    padding: 6px 10px;
+    padding: 3px 5px;
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
     background: var(--bg-white);
@@ -216,11 +216,6 @@ body {
     border-color: var(--primary);
 }
 
-.import-export {
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
-}
 
 /* ============================================
    BUTTON STYLES
